@@ -104,9 +104,11 @@ public class UserService {
 
 
     @Transactional
-    public User updateUser(User user) {
-        return userRepository.save(user);
+    public void updatePassword(User user, String newPassword) {
+        user.setPassword(passwordEncoder.encode(newPassword));
+        userRepository.save(user);
     }
+
 
     @Transactional
     public void deleteUser(String email) {
