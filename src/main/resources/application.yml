@@ -1,1 +1,29 @@
-spring.application.name=aidiary
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mariadb://mariadb:3306/ai_diary
+    username: dongha
+    password: ansqhrl3037
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+
+
+
+jwt:
+  secret: "my-secure-jwt-secret-key-which-is-long-enough"
+  expiration: 3600000
+
+logging:
+  level:
+    root: INFO
+    org.aidiary: DEBUG
+  file:
+    name: logs/aidiary.log
