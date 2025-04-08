@@ -1,5 +1,6 @@
 package org.aidiary.util;
 
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.aidiary.config.JwtProperties;
@@ -16,6 +17,7 @@ public class JwtUtil {
         this.jwtProperties = jwtProperties;
     }
 
+    // JWT 토큰 생성
     public String generateToken(String email) {
         Date now = new Date();
         Date expiryDate = new Date(now.getTime() + jwtProperties.getExpiration());
@@ -26,5 +28,28 @@ public class JwtUtil {
                 .setExpiration(expiryDate)
                 .signWith(SignatureAlgorithm.HS256, jwtProperties.getSecret())
                 .compact();
+    }
+
+    // 토큰에서 이메일 추출
+    public String extractEmail(String token) {
+        try {
+            Claims claims = Jwts.parser()
+                    .setSigningKey(jwtProperties.getSecret())
+                    .parseClaimsJws(token)
+                    .getBody();
+            return claims.getSubject();
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    // 토큰 유효성 검증
+    public boolean validateToken(String token) {
+        try {
+            Jwts.parser().setSigningKey(jwtProperties.getSecret()).parseClaimsJws(token);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }
