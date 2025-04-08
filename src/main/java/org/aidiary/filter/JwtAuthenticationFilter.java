@@ -4,10 +4,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.aidiary.entity.User;
-import org.aidiary.service.UserService;
 import org.aidiary.util.JwtUtil;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
@@ -15,42 +12,65 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
-import java.util.Collections;
 
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
-    @Autowired
-    private JwtUtil jwtUtil;
+    private final JwtUtil jwtUtil;
 
-    @Autowired
-    private UserService userService;
+    public JwtAuthenticationFilter(JwtUtil jwtUtil) {
+        this.jwtUtil = jwtUtil;
+    }
 
     @Override
-    protected void doFilterInternal(HttpServletRequest request,
-                                    HttpServletResponse response,
-                                    FilterChain filterChain) throws ServletException, IOException {
-        String authHeader = request.getHeader("Authorization");
-        if (authHeader != null && authHeader.startsWith("Bearer ")) {
-            String token = authHeader.substring(7);
-            try {
-                String email = jwtUtil.extractEmail(token);
-                if (email != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-                    // DB에서 사용자 정보 조회
-                    User user = userService.findByEmail(email);
-                    if (user != null) {
-                        // 권한이 없는 경우 필요하면 리스트에 ROLE_USER 등을 넣어줄 수 있음
-                        UsernamePasswordAuthenticationToken authentication =
-                                new UsernamePasswordAuthenticationToken(user, null, Collections.emptyList());
-                        authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-                        SecurityContextHolder.getContext().setAuthentication(authentication);
-                    }
-                }
-            } catch (Exception e) {
-                // 토큰 검증 실패 시 추가 로깅 또는 처리
-                e.printStackTrace();
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        try {
+            // 인증 우회 경로
+            if (shouldNotFilter(request)) {
+                filterChain.doFilter(request, response);
+                return;
             }
+
+            final String authHeader = request.getHeader("Authorization");
+            if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+                filterChain.doFilter(request, response);
+                return;
+            }
+
+            String token = authHeader.substring(7);
+            String email = null;
+
+            try {
+                email = jwtUtil.extractEmail(token);
+            } catch (Exception e) {
+                // 토큰이 유효하지 않은 경우 처리
+                filterChain.doFilter(request, response);
+                return;
+            }
+
+            if (email != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+                UsernamePasswordAuthenticationToken authentication =
+                        new UsernamePasswordAuthenticationToken(email, null, null);
+                authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+                SecurityContextHolder.getContext().setAuthentication(authentication);
+            }
+
+        } catch (Exception e) {
+            // 필터링 중 예외 발생 시 로그 출력
+            e.printStackTrace();
         }
+
         filterChain.doFilter(request, response);
+    }
+
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        String path = request.getRequestURI();
+        // Swagger와 관련된 모든 경로 예외 처리
+        return path.startsWith("/swagger-ui/") ||
+                path.startsWith("/v3/api-docs") ||
+                path.startsWith("/swagger-resources/") ||
+                path.startsWith("/webjars/") ||
+                path.startsWith("/favicon.ico");
     }
 }

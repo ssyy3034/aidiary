@@ -15,7 +15,11 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MariaDBDialect
 
-
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui/index.html
 
 jwt:
   secret: "my-secure-jwt-secret-key-which-is-long-enough"
@@ -26,8 +30,7 @@ logging:
     root: INFO
     org.aidiary: DEBUG
   file:
-    name: logs/aidiary.log
+    name: /var/log/aidiary/aidiary.log  # Docker 환경을 고려한 경로
 
 file:
-  upload-dir: /uploads/
-
+  upload-dir: /uploads/  # Docker에서 볼륨 경로 매핑 필요

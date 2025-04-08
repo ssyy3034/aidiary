@@ -46,16 +46,14 @@ dependencies {
     // Validation
     implementation 'org.springframework.boot:spring-boot-starter-validation'
 
-    // Logging
-    implementation 'org.springframework.boot:spring-boot-starter-logging'
-    implementation 'ch.qos.logback:logback-classic'
+    // Logging (Spring Boot 기본 로그백 사용)
     implementation 'org.slf4j:slf4j-api:2.0.7'
 
     // Testing
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     //Swagger
-    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.6'
 }
 
 tasks.named('test') {

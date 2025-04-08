@@ -12,14 +12,11 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
-                .info(new Info()
-                        .title("Aidiary API")
-                        .description("Aidiary 프로젝트의 API 명세서")
-                        .version("1.0")
+                .info(new Info().title("Diary AI API")
+                        .description("Diary AI 프로젝트 API 명세서")
+                        .version("v1.0")
                         .contact(new Contact()
-                                .name("Aidiary Support")
-                                .email("support@aidiary.com")
-                        )
-                );
+                                .name("Diary AI Support")
+                                .email("support@aidiary.com")));
     }
 }
