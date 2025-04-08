@@ -11,10 +11,9 @@ import org.aidiary.util.JwtUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.Map;
+import org.aidiary.config.JwtProperties;
 
 @RestController
 @RequestMapping("/api/v1/auth")
@@ -24,6 +23,7 @@ public class AuthController {
 
     private final UserService userService;
     private final JwtUtil jwtUtil;  // JwtUtil을 DI로 주입
+    private final JwtProperties jwtProperties;
 
     @PostMapping("/register")
     public ResponseEntity<String> register(@Valid @RequestBody UserDTO userDTO) {
