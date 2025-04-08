@@ -1,18 +1,18 @@
-2025-04-04T14:42:03.993+09:00  INFO 29737 --- [Test worker] org.aidiary.AidiaryApplicationTests      : Starting AidiaryApplicationTests using Java 17.0.8 with PID 29737 (started by dongha in /Users/dongha/Desktop/study/aidiary)
-2025-04-04T14:42:03.996+09:00 DEBUG 29737 --- [Test worker] org.aidiary.AidiaryApplicationTests      : Running with Spring Boot v3.4.4, Spring v6.2.5
-2025-04-04T14:42:03.996+09:00  INFO 29737 --- [Test worker] org.aidiary.AidiaryApplicationTests      : The following 1 profile is active: "test"
-2025-04-04T14:42:04.278+09:00  INFO 29737 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-04-04T14:42:04.301+09:00  INFO 29737 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interface.
-2025-04-04T14:42:04.505+09:00  INFO 29737 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-04-04T14:42:04.525+09:00  INFO 29737 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
-2025-04-04T14:42:04.538+09:00  INFO 29737 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-04-04T14:42:04.657+09:00  INFO 29737 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-04-04T14:42:04.670+09:00  INFO 29737 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-04T14:42:04.749+09:00  INFO 29737 --- [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2025-04-04T14:42:04.750+09:00  INFO 29737 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-04T14:42:04.765+09:00  WARN 29737 --- [Test worker] org.hibernate.dialect.Dialect            : HHH000511: The 2.2.220 version for [org.hibernate.dialect.MariaDBDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 10.4.0. Check the community dialects project for available legacy versions.
-2025-04-04T14:42:04.767+09:00  WARN 29737 --- [Test worker] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-04-04T14:42:04.774+09:00  INFO 29737 --- [Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-04-08T10:23:49.837+09:00  INFO 42265 --- [Test worker] org.aidiary.AidiaryApplicationTests      : Starting AidiaryApplicationTests using Java 17.0.8 with PID 42265 (started by dongha in /Users/dongha/Desktop/study/aidiary)
+2025-04-08T10:23:49.840+09:00 DEBUG 42265 --- [Test worker] org.aidiary.AidiaryApplicationTests      : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-08T10:23:49.841+09:00  INFO 42265 --- [Test worker] org.aidiary.AidiaryApplicationTests      : The following 1 profile is active: "test"
+2025-04-08T10:23:50.128+09:00  INFO 42265 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-08T10:23:50.154+09:00  INFO 42265 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interface.
+2025-04-08T10:23:50.359+09:00  INFO 42265 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-08T10:23:50.379+09:00  INFO 42265 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-08T10:23:50.392+09:00  INFO 42265 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-08T10:23:50.503+09:00  INFO 42265 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-08T10:23:50.516+09:00  INFO 42265 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-08T10:23:50.594+09:00  INFO 42265 --- [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-04-08T10:23:50.594+09:00  INFO 42265 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-08T10:23:50.609+09:00  WARN 42265 --- [Test worker] org.hibernate.dialect.Dialect            : HHH000511: The 2.2.220 version for [org.hibernate.dialect.MariaDBDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 10.4.0. Check the community dialects project for available legacy versions.
+2025-04-08T10:23:50.610+09:00  WARN 42265 --- [Test worker] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-08T10:23:50.618+09:00  INFO 42265 --- [Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 2.2.220
@@ -20,8 +20,8 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-04-04T14:42:05.113+09:00  INFO 29737 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-04-04T14:42:05.120+09:00  WARN 29737 --- [Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "drop table if exists user" via JDBC [Syntax error in SQL statement "drop table if exists [*]user"; expected "identifier";]
+2025-04-08T10:23:50.955+09:00  INFO 42265 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-08T10:23:50.962+09:00  WARN 42265 --- [Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "drop table if exists user" via JDBC [Syntax error in SQL statement "drop table if exists [*]user"; expected "identifier";]
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "drop table if exists user" via JDBC [Syntax error in SQL statement "drop table if exists [*]user"; expected "identifier";]
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
@@ -181,7 +181,7 @@ drop table if exists user [42001-220]
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
 	... 133 common frames omitted
 
-2025-04-04T14:42:05.128+09:00  WARN 29737 --- [Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table user (id bigint not null auto_increment, email varchar(255), name varchar(255), password varchar(255), primary key (id)) engine=InnoDB" via JDBC [Syntax error in SQL statement "create table [*]user (id bigint not null auto_increment, email varchar(255), name varchar(255), password varchar(255), primary key (id)) engine=InnoDB"; expected "identifier";]
+2025-04-08T10:23:50.970+09:00  WARN 42265 --- [Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table user (id bigint not null auto_increment, email varchar(255), name varchar(255), password varchar(255), primary key (id)) engine=InnoDB" via JDBC [Syntax error in SQL statement "create table [*]user (id bigint not null auto_increment, email varchar(255), name varchar(255), password varchar(255), primary key (id)) engine=InnoDB"; expected "identifier";]
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table user (id bigint not null auto_increment, email varchar(255), name varchar(255), password varchar(255), primary key (id)) engine=InnoDB" via JDBC [Syntax error in SQL statement "create table [*]user (id bigint not null auto_increment, email varchar(255), name varchar(255), password varchar(255), primary key (id)) engine=InnoDB"; expected "identifier";]
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
@@ -342,35 +342,35 @@ create table user (id bigint not null auto_increment, email varchar(255), name v
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
 	... 133 common frames omitted
 
-2025-04-04T14:42:05.135+09:00  INFO 29737 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-04-04T14:42:05.300+09:00  WARN 29737 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-04-04T14:42:05.318+09:00  WARN 29737 --- [Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+2025-04-08T10:23:50.977+09:00  INFO 42265 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-08T10:23:51.135+09:00  WARN 42265 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-08T10:23:51.150+09:00  WARN 42265 --- [Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 00420ed0-0635-4b79-b556-71b6aaceb016
+Using generated security password: ddb15ed6-f55f-44d3-a9a1-1523704dbf21
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2025-04-04T14:42:05.322+09:00  INFO 29737 --- [Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-04-04T14:42:05.612+09:00  INFO 29737 --- [Test worker] org.aidiary.AidiaryApplicationTests      : Started AidiaryApplicationTests in 1.765 seconds (process running for 2.296)
-2025-04-04T14:42:05.933+09:00  INFO 29737 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-04-04T14:42:06.139+09:00 ERROR 29737 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table if exists user
-2025-04-04T14:42:06.140+09:00  INFO 29737 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-04T14:42:06.173+09:00  INFO 29737 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-04-04T15:21:32.978+09:00  INFO 31344 --- [Test worker] org.aidiary.AidiaryApplicationTests      : Starting AidiaryApplicationTests using Java 17.0.8 with PID 31344 (started by dongha in /Users/dongha/Desktop/study/aidiary)
-2025-04-04T15:21:32.980+09:00 DEBUG 31344 --- [Test worker] org.aidiary.AidiaryApplicationTests      : Running with Spring Boot v3.4.4, Spring v6.2.5
-2025-04-04T15:21:32.980+09:00  INFO 31344 --- [Test worker] org.aidiary.AidiaryApplicationTests      : The following 1 profile is active: "test"
-2025-04-04T15:21:33.270+09:00  INFO 31344 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-04-04T15:21:33.293+09:00  INFO 31344 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interface.
-2025-04-04T15:21:33.497+09:00  INFO 31344 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-04-04T15:21:33.518+09:00  INFO 31344 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
-2025-04-04T15:21:33.532+09:00  INFO 31344 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-04-04T15:21:33.647+09:00  INFO 31344 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-04-04T15:21:33.661+09:00  INFO 31344 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-04T15:21:33.739+09:00  INFO 31344 --- [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2025-04-04T15:21:33.740+09:00  INFO 31344 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-04T15:21:33.755+09:00  WARN 31344 --- [Test worker] org.hibernate.dialect.Dialect            : HHH000511: The 2.2.220 version for [org.hibernate.dialect.MariaDBDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 10.4.0. Check the community dialects project for available legacy versions.
-2025-04-04T15:21:33.757+09:00  WARN 31344 --- [Test worker] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-04-04T15:21:33.765+09:00  INFO 31344 --- [Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-04-08T10:23:51.153+09:00  INFO 42265 --- [Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-08T10:23:51.442+09:00  INFO 42265 --- [Test worker] org.aidiary.AidiaryApplicationTests      : Started AidiaryApplicationTests in 1.753 seconds (process running for 2.264)
+2025-04-08T10:23:51.742+09:00  INFO 42265 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-08T10:23:51.947+09:00 ERROR 42265 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table if exists user
+2025-04-08T10:23:51.948+09:00  INFO 42265 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-08T10:23:51.980+09:00  INFO 42265 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-08T10:42:29.979+09:00  INFO 42666 --- [Test worker] org.aidiary.AidiaryApplicationTests      : Starting AidiaryApplicationTests using Java 17.0.8 with PID 42666 (started by dongha in /Users/dongha/Desktop/study/aidiary)
+2025-04-08T10:42:29.979+09:00 DEBUG 42666 --- [Test worker] org.aidiary.AidiaryApplicationTests      : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-04-08T10:42:29.980+09:00  INFO 42666 --- [Test worker] org.aidiary.AidiaryApplicationTests      : The following 1 profile is active: "test"
+2025-04-08T10:42:30.253+09:00  INFO 42666 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-08T10:42:30.284+09:00  INFO 42666 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
+2025-04-08T10:42:30.488+09:00  INFO 42666 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-08T10:42:30.509+09:00  INFO 42666 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-08T10:42:30.523+09:00  INFO 42666 --- [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-08T10:42:30.630+09:00  INFO 42666 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-08T10:42:30.642+09:00  INFO 42666 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-08T10:42:30.718+09:00  INFO 42666 --- [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-04-08T10:42:30.719+09:00  INFO 42666 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-08T10:42:30.735+09:00  WARN 42666 --- [Test worker] org.hibernate.dialect.Dialect            : HHH000511: The 2.2.220 version for [org.hibernate.dialect.MariaDBDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 10.4.0. Check the community dialects project for available legacy versions.
+2025-04-08T10:42:30.737+09:00  WARN 42666 --- [Test worker] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-08T10:42:30.745+09:00  INFO 42666 --- [Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 2.2.220
@@ -378,8 +378,8 @@ This generated password is for development use only. Your security configuration
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-04-04T15:21:34.106+09:00  INFO 31344 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-04-04T15:21:34.113+09:00  WARN 31344 --- [Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "drop table if exists user" via JDBC [Syntax error in SQL statement "drop table if exists [*]user"; expected "identifier";]
+2025-04-08T10:42:31.089+09:00  INFO 42666 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-08T10:42:31.096+09:00  WARN 42666 --- [Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "drop table if exists user" via JDBC [Syntax error in SQL statement "drop table if exists [*]user"; expected "identifier";]
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "drop table if exists user" via JDBC [Syntax error in SQL statement "drop table if exists [*]user"; expected "identifier";]
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
@@ -539,7 +539,7 @@ drop table if exists user [42001-220]
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
 	... 133 common frames omitted
 
-2025-04-04T15:21:34.123+09:00  WARN 31344 --- [Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table user (id bigint not null auto_increment, email varchar(255), name varchar(255), password varchar(255), primary key (id)) engine=InnoDB" via JDBC [Syntax error in SQL statement "create table [*]user (id bigint not null auto_increment, email varchar(255), name varchar(255), password varchar(255), primary key (id)) engine=InnoDB"; expected "identifier";]
+2025-04-08T10:42:31.104+09:00  WARN 42666 --- [Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table user (id bigint not null auto_increment, email varchar(255), name varchar(255), password varchar(255), primary key (id)) engine=InnoDB" via JDBC [Syntax error in SQL statement "create table [*]user (id bigint not null auto_increment, email varchar(255), name varchar(255), password varchar(255), primary key (id)) engine=InnoDB"; expected "identifier";]
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table user (id bigint not null auto_increment, email varchar(255), name varchar(255), password varchar(255), primary key (id)) engine=InnoDB" via JDBC [Syntax error in SQL statement "create table [*]user (id bigint not null auto_increment, email varchar(255), name varchar(255), password varchar(255), primary key (id)) engine=InnoDB"; expected "identifier";]
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
@@ -700,17 +700,17 @@ create table user (id bigint not null auto_increment, email varchar(255), name v
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
 	... 133 common frames omitted
 
-2025-04-04T15:21:34.130+09:00  INFO 31344 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-04-04T15:21:34.293+09:00  WARN 31344 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-04-04T15:21:34.307+09:00  WARN 31344 --- [Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+2025-04-08T10:42:31.111+09:00  INFO 42666 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-08T10:42:31.265+09:00  WARN 42666 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-08T10:42:31.281+09:00  WARN 42666 --- [Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 10dc9c7d-3026-4211-bfa4-8fdad6d64d06
+Using generated security password: 36688199-b774-437c-8e8b-d87f1afafbbe
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2025-04-04T15:21:34.311+09:00  INFO 31344 --- [Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-04-04T15:21:34.597+09:00  INFO 31344 --- [Test worker] org.aidiary.AidiaryApplicationTests      : Started AidiaryApplicationTests in 1.764 seconds (process running for 3.057)
-2025-04-04T15:21:34.905+09:00  INFO 31344 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-04-04T15:21:35.110+09:00 ERROR 31344 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table if exists user
-2025-04-04T15:21:35.111+09:00  INFO 31344 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-04T15:21:35.145+09:00  INFO 31344 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-08T10:42:31.284+09:00  INFO 42666 --- [Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-04-08T10:42:31.577+09:00  INFO 42666 --- [Test worker] org.aidiary.AidiaryApplicationTests      : Started AidiaryApplicationTests in 1.74 seconds (process running for 2.283)
+2025-04-08T10:42:31.882+09:00  INFO 42666 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-08T10:42:32.084+09:00 ERROR 42666 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table if exists user
+2025-04-08T10:42:32.085+09:00  INFO 42666 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-08T10:42:32.119+09:00  INFO 42666 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

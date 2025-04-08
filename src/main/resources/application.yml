@@ -27,3 +27,7 @@ logging:
     org.aidiary: DEBUG
   file:
     name: logs/aidiary.log
+
+file:
+  upload-dir: /uploads/
+
