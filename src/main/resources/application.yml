@@ -18,7 +18,7 @@ spring:
 
 
 jwt:
-  secret: "my-secure-jwt-secret-key-which-is-long-enough"
+  secret: "3n4xJuyoY2BO3ltRPCTxBeLdn3bLr7NpKAELQaBmmzI="
   expiration: 3600000
 
 logging:
