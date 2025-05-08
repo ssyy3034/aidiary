@@ -8,6 +8,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.cors.CorsConfigurationSource;
+
+import java.util.Arrays;
 
 @Configuration
 public class SecurityConfig {
@@ -17,7 +22,6 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    // JWT 인증 필터 빈 등록 (필요한 의존성은 필터 내에서 주입받거나, 생성자 주입 방식으로 처리)
     @Bean
     public JwtAuthenticationFilter jwtAuthenticationFilter() {
         return new JwtAuthenticationFilter();
@@ -27,16 +31,29 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http, JwtAuthenticationFilter jwtAuthenticationFilter) throws Exception {
         http
                 .csrf(csrf -> csrf.disable())
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()))  // CORS 설정 활성화
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/v1/auth/**").permitAll()  // 로그인, 회원가입 등은 인증 없이 접근
-                        .requestMatchers("/api/v1/user/**").authenticated()  // 조회 API 등은 인증 필요
-                        .anyRequest().permitAll()  // 테스트용으로 나머지 요청은 모두 허용
+                        .requestMatchers("/api/v1/auth/**").permitAll()  // 로그인, 회원가입은 인증 없이 접근 가능
+                        .requestMatchers("/api/v1/user/**").authenticated()  // 사용자 관련 API는 인증 필요
+                        .anyRequest().permitAll()  // 나머지 경로는 모두 허용 (테스트용)
                 )
-                // JWT 인증 필터를 UsernamePasswordAuthenticationFilter 전에 추가
-                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
-                .cors(cors -> cors.disable());  // 테스트용 CORS 비활성화
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
 
+    // CORS 설정
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173",
+                "http://localhost:4173"));
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
+        configuration.setAllowedHeaders(Arrays.asList("*"));
+        configuration.setAllowCredentials(true);
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
+    }
 }
